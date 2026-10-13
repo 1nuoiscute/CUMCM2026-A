@@ -1,0 +1,189 @@
+[
+  {
+    "source": "最终提交版本/完整论文_合成 (2).pdf",
+    "published": "paper/paper.pdf",
+    "sha256": "52510f78271a12802bdb4c06fe4729068a4b3826769a9f44f81a8f207bacb7fe"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/AI工具使用详情.pdf",
+    "published": "paper/AI工具使用详情.pdf",
+    "sha256": "04caad9fbe9db46a5cf09775a6d1292afca00e0b2e4abc94aeb655d01396b209"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件1.xlsx",
+    "published": "data/附件1.xlsx",
+    "sha256": "7ef32870abeef420b89560b2530ff60dfe4255917805151d89988d0311af9dd7"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件2.xlsx",
+    "published": "data/附件2.xlsx",
+    "sha256": "5563acbfa4b4afb10cc6c03e2207e5369bf39da27576672aff14cc5c32e704af"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件3/result1.xlsx",
+    "published": "data/附件3/result1.xlsx",
+    "sha256": "23b261b295c1b787d000eebbca6521c37075107b6fcf78724f8d395ce1798ff4"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件3/result2.xlsx",
+    "published": "data/附件3/result2.xlsx",
+    "sha256": "23b261b295c1b787d000eebbca6521c37075107b6fcf78724f8d395ce1798ff4"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件3/result3.xlsx",
+    "published": "data/附件3/result3.xlsx",
+    "sha256": "07e4793d620a7f899804c0298d49a16a197960440fd47f8bb780c57ec27e2859"
+  },
+  {
+    "source": "01_赛题与附件/附件/附件3/result4.xlsx",
+    "published": "data/附件3/result4.xlsx",
+    "sha256": "86e9300ffa3d30c43de895ea6723da943e85b8740b137bcae5af7107f076eeac"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/process_q4_shrinkage_response.png",
+    "published": "results/submitted/process_q4_shrinkage_response.png",
+    "sha256": "df38875460d1631f22033abaa8d8ed652f6a4b037e7272fa8da09280a9aee321"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_boundary_compare_scientific.png",
+    "published": "results/submitted/q1_boundary_compare_scientific.png",
+    "sha256": "59e6054ba84383c901cdc52c2630f376799cb72fecdd2499c6392b79e030f4b8"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_boundary_history.png",
+    "published": "results/submitted/q1_boundary_history.png",
+    "sha256": "1bb66392e82d00b925294038e1d064002f619e525bb432424950033cfa9bc6b5"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_boundary_layer_scientific.png",
+    "published": "results/submitted/q1_boundary_layer_scientific.png",
+    "sha256": "b61915b1ebf17909ca60f35f5e9ee50726f6baab51f906712879f8a1a9c0e3e3"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_fick_scientific.png",
+    "published": "results/submitted/q1_fick_scientific.png",
+    "sha256": "a8a92200c59267baa3c5d0e0f6e60c26da5ec0028a9b21198772418dcf9b72f2"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_fourier_scientific.png",
+    "published": "results/submitted/q1_fourier_scientific.png",
+    "sha256": "5400db38a5c663eeefd497bb5df8c2da0878a235cf7851c4d7c075eb3c77d41f"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_fvm_bdf_flow.pdf",
+    "published": "results/submitted/q1_fvm_bdf_flow.pdf",
+    "sha256": "743310715fb129931e534d4e7efcadd036227e76ac2aab08a84c550f9ea6c9de"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_fvm_flux_balance.png",
+    "published": "results/submitted/q1_fvm_flux_balance.png",
+    "sha256": "0321e8c6c042e85651dcd5cf729af1def56b0f2d4088fb37a73c4a2794a1a9d8"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_physical_process_imagegen.png",
+    "published": "results/submitted/q1_physical_process_imagegen.png",
+    "sha256": "86bb4b803d77f81ed8f43488a1d957797fa8632b6dc158aa8367eee7237b68e8"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q1_radial_profiles.png",
+    "published": "results/submitted/q1_radial_profiles.png",
+    "sha256": "ecc6c31f1673f3a580cef06ce3b4a08a7d7c0de4fd90a59178ce456b89ea9257"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q2_diffusivity.png",
+    "published": "results/submitted/q2_diffusivity.png",
+    "sha256": "6bfae1ea7ab4e66f5bd52ec7a6cbf7e56dd57de433aeea7e2aa36f975c9c8642"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/q2_profiles.png",
+    "published": "results/submitted/q2_profiles.png",
+    "sha256": "7ca22a3f41a17a5505bc46dc0d532c1b1915e2f0a1aae02da181e0fba1d4ec8a"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/raw_q4_radius_reconstruction.png",
+    "published": "results/submitted/raw_q4_radius_reconstruction.png",
+    "sha256": "4d8bb6c369736a399cfbb6948b2174d11f49aee5a55d83e9d9bb43ec123c2a4c"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result1.xlsx",
+    "published": "results/submitted/result1.xlsx",
+    "sha256": "b88de607d917b32272474c1af37ab5fa84c9ba9eaac10620a6d1b65977fc8c95"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result2.xlsx",
+    "published": "results/submitted/result2.xlsx",
+    "sha256": "fabc40d802ccfa2327c56266ec4bcd874ddad46b1bff5436943d9847ffd4f0cd"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result3.xlsx",
+    "published": "results/submitted/result3.xlsx",
+    "sha256": "864c4d48a55756d25958f21941c4d1d621d835e8761636e8bdd6556f45b39b55"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result4.xlsx",
+    "published": "results/submitted/result4.xlsx",
+    "sha256": "1030751184216853d2f4f19093d4932ab8d634e53f2c5f79a74b75d97b4fe377"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result_q3_moisture_history.png",
+    "published": "results/submitted/result_q3_moisture_history.png",
+    "sha256": "b88328287422583ff8962a4c799e89014418c3f63b51bbec11ffc0dc2142df5b"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result_q3_radial_profiles.png",
+    "published": "results/submitted/result_q3_radial_profiles.png",
+    "sha256": "f56fa534eab9ec28c3090db86426b7b1470852fcf180ebe74f5c364f2521d893"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/result_q4_moisture_history.png",
+    "published": "results/submitted/result_q4_moisture_history.png",
+    "sha256": "c598a94765bbe891cac70e8bf3a36077682d4a98c79235aa3ca22b3e76e394e5"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/药材初始几何形状及尺寸示意图.png",
+    "published": "results/submitted/药材初始几何形状及尺寸示意图.png",
+    "sha256": "7ffb6b7aad81d08f7c66e03b330fc37284293ca0f624c78e703dda08a12cc784"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/drying_core.py",
+    "published": "src/drying_core.py",
+    "original_sha256": "60073e8531b592a72e650f3cde6213e8e48ec565968cc820a69467928c390b58",
+    "published_sha256": "60073e8531b592a72e650f3cde6213e8e48ec565968cc820a69467928c390b58"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题1.py",
+    "published": "src/问题1.py",
+    "original_sha256": "dd05e2510a02a643c43140310a107908830903903e38fe917bf3716a670dd9c9",
+    "published_sha256": "66819d12796d50775bc1515bc2f12eb6df3715702fab58cc1f5795150e69707d"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题2.py",
+    "published": "src/问题2.py",
+    "original_sha256": "c151cfb96292db91dde8728cd3ef65f1d52a595417d6f5aab4a55604bab21bdc",
+    "published_sha256": "09613ad07d0acab3ba4c3f96e739d5b8c1e81fba33f680ae34080ad5dda11342"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题3.py",
+    "published": "src/问题3.py",
+    "original_sha256": "8ce94e8d2cc2d94a467f7dfd560b46674a65764cf479de6cd20fa27f88ad3a9a",
+    "published_sha256": "df9ad1dd6d23045411f0f5c176e286af52e62c82f340a2a57cb36dd43daad3c7"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题3数值验证.py",
+    "published": "src/问题3数值验证.py",
+    "original_sha256": "b98a37653aff40e7b271ed778feee86c5526da598c36e9555f89ea70f3dd4adc",
+    "published_sha256": "7845901d4db0d6f573cfcc5b32f68e2cf1b63f7db68b61abc358da849f56bbca"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题4.py",
+    "published": "src/问题4.py",
+    "original_sha256": "43077e3803815dc855946d2dd2795089665d23c66e6953f9add6bfc4e7ea3304",
+    "published_sha256": "925344b63e4e87cd35b2293bd3b98e3a7fee523c4c2ac130d509735773d362e5"
+  },
+  {
+    "source": "最终提交版本/支撑材料/支撑材料/问题4数值验证.py",
+    "published": "src/问题4数值验证.py",
+    "original_sha256": "9b6bf4cd6096e20e011f8448469f3f9f3564a9583b7000e39360046ab8c0a018",
+    "published_sha256": "98fcf7afa27dd1c4b33e6d1b99ce752b018f591d4c882d9c32002f9255eba68b"
+  }
+]

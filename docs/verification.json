@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-13",
+  "platform": "Windows",
+  "python": "3.13.13",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.0",
+    "openpyxl": "3.1.5"
+  },
+  "commands": [
+    "python run.py all",
+    "python scripts/compare_results.py"
+  ],
+  "all_model_exit_codes": 0,
+  "comparisons": [
+    {
+      "question": 1,
+      "sheet_names_equal": true,
+      "numeric_cells": 79242,
+      "different_cells": 0,
+      "max_absolute_difference": 0.0,
+      "mismatches_over_tolerance": 0,
+      "tolerance": 5e-05
+    },
+    {
+      "question": 2,
+      "sheet_names_equal": true,
+      "numeric_cells": 475242,
+      "different_cells": 0,
+      "max_absolute_difference": 0.0,
+      "mismatches_over_tolerance": 0,
+      "tolerance": 5e-05
+    },
+    {
+      "question": 3,
+      "sheet_names_equal": true,
+      "numeric_cells": 75943,
+      "different_cells": 0,
+      "max_absolute_difference": 0.0,
+      "mismatches_over_tolerance": 0,
+      "tolerance": 5e-05
+    },
+    {
+      "question": 4,
+      "sheet_names_equal": true,
+      "numeric_cells": 47448,
+      "different_cells": 0,
+      "max_absolute_difference": 0.0,
+      "mismatches_over_tolerance": 0,
+      "tolerance": 5e-05
+    }
+  ],
+  "independent_q3_q4_validation": "not_run",
+  "fresh_virtual_environment": "not_tested",
+  "other_operating_systems": "not_tested"
+}

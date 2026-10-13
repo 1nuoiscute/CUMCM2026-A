@@ -1,0 +1,217 @@
+--- submitted/问题1.py
++++ src/问题1.py
+@@ -3,7 +3,7 @@
+ 运行方式：
+     python 问题1.py
+ 
+-程序读取 ../../A题/附件/附件1.xlsx，生成 result1.xlsx、问题一论文表格、
++程序读取 data/附件1.xlsx，生成 result1.xlsx、问题一论文表格、
+ 验证数据和全部问题一图片。所有随机过程均固定种子；本问的确定性计算
+ 不依赖随机数。
+ """
+@@ -14,7 +14,7 @@
+ from dataclasses import dataclass
+ from pathlib import Path
+ import sys
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ 
+ import matplotlib as mpl
+ mpl.use("Agg")
+@@ -26,7 +26,7 @@
+ 
+ QUESTION_DIR = Path(__file__).resolve().parent
+ SUPPORT_ROOT = QUESTION_DIR
+-CONTEST_ROOT = QUESTION_DIR.parents[2]
++CONTEST_ROOT = QUESTION_DIR.parent
+ sys.path.insert(0, str(QUESTION_DIR))
+ 
+ from drying_core import (
+@@ -43,10 +43,10 @@
+ RANDOM_SEED = 20260910
+ np.random.seed(RANDOM_SEED)
+ 
+-INPUT_FILE = CONTEST_ROOT / "01_赛题与附件" / "附件" / "附件1.xlsx"
+-DATA_DIR = Path(tempfile.gettempdir()) / "cumcm2026_q1_intermediate"
+-FIGURE_DIR = QUESTION_DIR
+-RESULT_FILE = QUESTION_DIR / "result1.xlsx"
++INPUT_FILE = DATA_ROOT / "附件1.xlsx"
++DATA_DIR = OUTPUT_ROOT / "q1"
++FIGURE_DIR = OUTPUT_ROOT / "q1"
++RESULT_FILE = FIGURE_DIR / "result1.xlsx"
+ 
+ TABLE_TIMES_S = np.array([100, 300, 600, 900, 1200, 1500, 1800], dtype=float)
+ TABLE_RADII_CM = np.array([0.0, 0.5, 1.0, 1.5, 2.0])
+--- submitted/问题2.py
++++ src/问题2.py
+@@ -1,7 +1,7 @@
+ """问题二：变物性条件下的圆柱药材干燥计算。"""
+ from pathlib import Path
+ import sys
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ 
+ import matplotlib as mpl
+ mpl.use("Agg")
+@@ -11,15 +11,15 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ SUPPORT = HERE
+-ROOT = HERE.parents[2]
++ROOT = HERE.parent
+ sys.path.insert(0, str(HERE))
+ 
+ from drying_core import CylinderConfig, MaterialProperties, sample_radial_field, solve_fixed_radius
+ 
+-INPUT = ROOT / "01_赛题与附件" / "附件" / "附件1.xlsx"
+-FIG = HERE
+-DATA = Path(tempfile.gettempdir()) / "cumcm2026_q2_intermediate"
+-RESULT = HERE / "result2.xlsx"
++INPUT = DATA_ROOT / "附件1.xlsx"
++FIG = OUTPUT_ROOT / "q2"
++DATA = OUTPUT_ROOT / "q2"
++RESULT = FIG / "result2.xlsx"
+ 
+ 
+ class Ambient:
+--- submitted/问题3.py
++++ src/问题3.py
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ import shutil
+ import sys
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ 
+ import matplotlib as mpl
+ mpl.use("Agg")
+@@ -12,7 +12,7 @@
+ 
+ ROOT = Path(__file__).resolve().parent
+ SUPPORT_ROOT = ROOT
+-CONTEST_ROOT = ROOT.parents[2]
++CONTEST_ROOT = ROOT.parent
+ sys.path.insert(0, str(ROOT))
+ 
+ from drying_core import (
+@@ -24,11 +24,11 @@
+ )
+ 
+ 
+-INPUT = CONTEST_ROOT / "01_赛题与附件" / "附件" / "附件1.xlsx"
+-TEMPLATE = CONTEST_ROOT / "01_赛题与附件" / "附件" / "附件3" / "result3.xlsx"
+-OUTPUT = ROOT / "result3.xlsx"
+-RESULTS = Path(tempfile.gettempdir()) / "cumcm2026_q3_intermediate"
+-FIGURES = ROOT
++INPUT = DATA_ROOT / "附件1.xlsx"
++TEMPLATE = DATA_ROOT / "附件3" / "result3.xlsx"
++OUTPUT = OUTPUT_ROOT / "q3" / "result3.xlsx"
++RESULTS = OUTPUT_ROOT / "q3"
++FIGURES = RESULTS
+ 
+ R = 0.02
+ H = 25.0
+@@ -210,8 +210,8 @@
+     save_figure(fig, "result_q3_radial_profiles")
+ 
+ def main():
+-    RESULTS.mkdir(exist_ok=True)
+-    FIGURES.mkdir(exist_ok=True)
++    RESULTS.mkdir(parents=True, exist_ok=True)
++    FIGURES.mkdir(parents=True, exist_ok=True)
+     ambient = FullProcessAmbient(INPUT)
+     output_times = np.arange(0.0, 72.0 * 3600.0 + 60.0, 60.0)
+     solution = solve_fixed_radius(
+--- submitted/问题3数值验证.py
++++ src/问题3数值验证.py
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ import sys
+ import time
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ 
+ import numpy as np
+ 
+@@ -14,7 +14,7 @@
+ from 问题3 import FullProcessAmbient, INPUT, model_config, interpolate_crossing
+ 
+ 
+-RESULTS = Path(tempfile.gettempdir()) / "cumcm2026_q3_intermediate"
++RESULTS = OUTPUT_ROOT / "q3"
+ END_TIME_S = 60.0 * 3600.0
+ OUTPUT_TIMES = np.arange(0.0, END_TIME_S + 60.0, 60.0)
+ RADII_CM = np.array([0.0, 0.5, 1.0, 1.5, 2.0])
+@@ -113,7 +113,7 @@
+ 
+ 
+ def main():
+-    RESULTS.mkdir(exist_ok=True)
++    RESULTS.mkdir(parents=True, exist_ok=True)
+     cases = {}
+     specifications = [
+         ("bdf_n800_s5", "BDF，800区间，5 s", 800, "BDF", 5.0),
+--- submitted/问题4.py
++++ src/问题4.py
+@@ -13,7 +13,7 @@
+ import csv
+ import json
+ import shutil
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ 
+ import matplotlib as mpl
+ import matplotlib.pyplot as plt
+@@ -26,14 +26,14 @@
+ 
+ 
+ ROOT = Path(__file__).resolve().parent
+-CONTEST_ROOT = ROOT.parents[2]
+-INPUT_DIR = CONTEST_ROOT / "01_赛题与附件" / "附件"
++CONTEST_ROOT = ROOT.parent
++INPUT_DIR = DATA_ROOT
+ ATTACHMENT1 = INPUT_DIR / "附件1.xlsx"
+ ATTACHMENT2 = INPUT_DIR / "附件2.xlsx"
+ TEMPLATE = INPUT_DIR / "附件3" / "result4.xlsx"
+-OUTPUT = ROOT / "result4.xlsx"
+-RESULTS = Path(tempfile.gettempdir()) / "cumcm2026_q4_intermediate"
+-FIGURES = ROOT
++OUTPUT = OUTPUT_ROOT / "q4" / "result4.xlsx"
++RESULTS = OUTPUT_ROOT / "q4"
++FIGURES = RESULTS
+ PUBLISHED_FIGURES = {
+     "raw_q4_radius_reconstruction",
+     "process_q4_shrinkage_response",
+@@ -515,7 +515,7 @@
+ 
+ 
+ def q3_completion_from_existing():
+-    path = Path(tempfile.gettempdir()) / "cumcm2026_q3_intermediate" / "q3_summary.txt"
++    path = OUTPUT_ROOT / "q3" / "q3_summary.txt"
+     if path.exists():
+         for line in path.read_text(encoding="utf-8").splitlines():
+             if line.startswith("completion_time_h="):
+--- submitted/问题4数值验证.py
++++ src/问题4数值验证.py
+@@ -9,7 +9,7 @@
+ import importlib.util
+ import sys
+ import time
+-import tempfile
++from project_paths import DATA_ROOT, OUTPUT_ROOT
+ from dataclasses import dataclass
+ from pathlib import Path
+ 
+@@ -20,10 +20,10 @@
+ 
+ 
+ ROOT = Path(__file__).resolve().parent
+-RESULTS = Path(tempfile.gettempdir()) / "cumcm2026_q4_intermediate"
++RESULTS = OUTPUT_ROOT / "q4"
+ FIGURES = RESULTS
+ MODEL_PATH = ROOT / "问题4.py"
+-ATTACHMENT_DIR = ROOT.parents[2] / "01_赛题与附件" / "附件"
++ATTACHMENT_DIR = DATA_ROOT
+ ATTACHMENT1 = ATTACHMENT_DIR / "附件1.xlsx"
+ 
+ END_TIME_S = 56.0 * 3600.0
